@@ -50,7 +50,7 @@ namespace MagniseTask.Controllers
             {
                 var authHeaderValue = Request.Headers["Authorization"].ToString();
 
-                if (string.IsNullOrWhiteSpace(authHeaderValue) || !authHeaderValue.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
+                if (string.IsNullOrWhiteSpace(authHeaderValue))
                 {
                     return Unauthorized("Authorization token is missing or invalid.");
                 }
